@@ -13,18 +13,18 @@ import java.util.Date;
  */
 public class Season {
     public String name;
-    public Date start_date;
-    public Date end_date;
+//    public Date start_date;
+//    public Date end_date;
     public float temperature;
     public float avgwaterSoil;
     public float humidity;
     public float altitude;
     
-    Season(String name,Date start_date,Date end_date,float temp,float avg,float humidity,float alti){
+    Season(String name,float temp,float avg,float humidity,float alti){
         this.name=name;
-        this.start_date=start_date;
+//        this.start_date=start_date;
         this.avgwaterSoil=avg;
-        this.end_date=end_date;
+//        this.end_date=end_date;
         this.temperature=temp;
         this.altitude=alti;
         this.humidity=humidity;
@@ -47,12 +47,12 @@ public class Season {
         return this.humidity;
        
     }
-    public Date getStartDate(){
-        return this.start_date;
-       
-    }
-    public Date getEndDate(){
-        return this.end_date;
-       
-    }
+//    public Date getStartDate(){
+//        return this.start_date;
+//       
+//    }
+//    public Date getEndDate(){
+//        return this.end_date;
+//       
+//    }
 }

@@ -10,11 +10,11 @@ package guhinga;
  * @author TUYANDRE
  */
 public class Category {
-    public String name;
+    public String category_name;
     public float humidity;
     public float altitude;
     Category(String n,float h,float al){
-        this.name=n;
+        this.category_name=n;
         this.altitude=al;
         this.humidity=h;
     }
@@ -23,7 +23,7 @@ public class Category {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     public String getName(){
-        return this.name;
+        return this.category_name;
     }
     public float getHumidity(){
         return this.humidity;

@@ -11,14 +11,25 @@ package guhinga;
  */
 public class Igihingwa extends Category{
     
-    public Igihingwa(String name, float h, float al) {
-        super(name, h, al);
+     public String name;
+     public float avgwaterSoil,temperature;
+     
+     
+     Igihingwa(String category_name, float h, float al,String name,float avg,float temp) {
+//        super(category_name, h, al);
+        this.name=name;
+        this.category_name=category_name;
+        this.altitude=al;
+        this.humidity=h;
+        this.avgwaterSoil=avg;
+        this.temperature=temp;
+        
     }
-    public float avgwaterSoil;
+   
 
-    Igihingwa() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+//    Igihingwa() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+//    
     
 }
