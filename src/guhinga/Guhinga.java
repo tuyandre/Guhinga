@@ -56,7 +56,8 @@ public class Guhinga {
             hinga.addPlant();
         case 5:
             
-            
+            hinga.AnalyzeUmuhinzi();
+            System.exit(0);
             break;
         case 6:
            System.exit(0);
@@ -65,39 +66,7 @@ public class Guhinga {
         default:
         
         }
-   
-   
-   System.out.println("Ushaka kongera kwinjiza akandi karere andika 1 gukomeza kanda 0");
-   int districtchoice=scanner.nextInt();
-   switch(districtchoice) {
-  case 1:
-   hinga.addDistrict();
-    break;
-  case 0:
-    System.out.println("Tugiye kwinjiza data z'igihembwe kihinga");
-    hinga.addSeason();
-    System.out.println("Ushaka kongera kwinjiza ikindi gihembwe kihinga andika 1 gukomeza kanda 0");
-    int seasonCoice=scanner.nextInt();
-     switch(seasonCoice) {
-  case 1:
-    hinga.addSeason();
-    break;
-  case 0:
-      System.out.println("Tugiye kwinjiza data z'ubwoko bw'igihingwa");
-      hinga.addCategory();
-      System.out.println("Tugiye kwinjiza data z'igihingwa");
-      hinga.addPlant();
-      break;
-      default:
-    // code block
-}
   
-      
-    break;
-  default:
-    // code block
-}
-   
     
 }
     public void addDistrict(){
@@ -160,18 +129,29 @@ public class Guhinga {
          System.out.println("injiza ingano yamazi mubutaka igihingwa gikenera (urugero:34.6)");
    avgwaterSoil=scanner.nextFloat();
    
-    System.out.println("injiza izina ryubwoko igihingwa kibarizwamo (ibinyamafufu)");
-   cat_name=scanner.nextLine();
-   Category cat=category.get(cat_name);
+//    System.out.println("injiza izina ryubwoko igihingwa kibarizwamo (ibinyamafufu)");
+//   cat_name=scanner.nextLine();
+//  
+//   Category cat=category.get(cat_name);
    
-   Igihingwa igih=new Igihingwa(cat.getName(),cat.getHumidity(),cat.getAltitude(),name,avgwaterSoil,temperature);
+   Igihingwa igih=new Igihingwa(name,avgwaterSoil,temperature);
     igihingwa.put(name, igih);
     }
     
     
     public void AnalyzeUmuhinzi(){
          for (String j : igihingwa.keySet()) {
-            Category cat=category.get(igihingwa.get(j).category_name);
+            for (String n : season.keySet()) {
+                for (String jn : district.keySet()) {
+                    if(igihingwa.get(j).getTemperature()==season.get(n).getTemperature()&&igihingwa.get(j).getTemperature()==district.get(jn).getTemperature()){
+                        System.out.println("Igihingw "+" "+j+" "+"cyahingwa mugihembwe"+" "+n +" " +"mu karere"+" "+jn);
+                    }else{
+                        System.out.println("Gerageza");
+                    }
+                    
+                }
+                
+            }
             
          }
     }

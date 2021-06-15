@@ -18,10 +18,6 @@ public class Category {
         this.altitude=al;
         this.humidity=h;
     }
-
-    Category() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     public String getName(){
         return this.category_name;
     }
