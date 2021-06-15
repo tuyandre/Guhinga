@@ -1,5 +1,5 @@
 # Guhinga
- homework yogukora system yumuhinzi
+ Hinga neza muhinzi umenya ahaberanye nigihingwa cyawe nigihe wagihingira
  # uko ikora
  Uzabanza winjizemo data z'uturere
  winjizemo data zigihembwe kihinga
